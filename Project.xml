@@ -2,10 +2,10 @@
 <project>
 	<!-- _________________________ Application Settings _________________________ -->
 
-	<app title="Friday Night Funkin': Joalor64 Engine" main="Main" version="0.2.7.1" company="Joalor64GH" />
-        <app file="J64Engine" if="windows" />
-	<app file="J64ELinux" if="linux" />
-	<app file="J64EMac" if="mac" />
+	<app title="Friday Night Funkin': VS Rasazy" main="Main" version="0.2.7.1" company="Joalor64GH" />
+        <app file="VSRasazy" if="windows" />
+	<app file="VSRasazy" if="linux" />
+	<app file="VSRasazy" if="mac" />
 	<!-- <app file="J64Engine (x64)" unless="32bit" /> -->
 	
 	<!--Switch Export with Unique ApplicationID and Icon-->
@@ -54,13 +54,9 @@
 	<define name="ACHIEVEMENTS_ALLOWED" />
 	<define name="VIDEOS_ALLOWED" if="web || windows" unless="32bits"/>
 	<define name="PSYCH_WATERMARKS"/> <!-- DELETE THIS TO REMOVE WATERMARKS/DEV NAMES ON TITLE SCREEN -->
-	<define name="TITLE_SCREEN_EASTER_EGG" if="officialBuild"/> <!-- DELETE THE if="officialBuild" for enabling this on an unofficial build -->
 
 	<assets path="assets/preload" rename="assets" exclude="*.ogg" if="web"/>
 	<assets path="assets/preload" rename="assets" exclude="*.mp3"  unless="web"/>
-	<section if="TITLE_SCREEN_EASTER_EGG">
-		<assets path="assets/secrets" rename="assets" exclude="*.ogg" if="web"/>
-		<assets path="assets/secrets" rename="assets" exclude="*.mp3"  unless="web"/>
 	</section>
 
 	<!-- DONT ENABLE THIS -->
@@ -74,25 +70,11 @@
 	<section if="PRELOAD_ALL">
 		<library name="songs"         preload="true" />
 		<library name="shared"        preload="true" />
-		<library name="tutorial"      preload="true" />
-		<library name="week1"         preload="true" />
-		<library name="week2"         preload="true" />
-		<library name="week3"         preload="true" />
-		<library name="week4"         preload="true" />
-		<library name="week5"         preload="true" />
-		<library name="week6"         preload="true" />
 	</section>
 	
 	<section if="NO_PRELOAD_ALL">
 		<library name="songs"         preload="false" />
 		<library name="shared"        preload="false" />
-		<library name="tutorial"      preload="false" />
-		<library name="week1"         preload="false" />
-		<library name="week2"         preload="false" />
-		<library name="week3"         preload="false" />
-		<library name="week4"         preload="false" />
-		<library name="week5"         preload="false" />
-		<library name="week6"         preload="false" />
 	</section>
 	
 	<assets path="assets/videos"        library="videos"        if="VIDEOS_ALLOWED"/>
@@ -100,25 +82,11 @@
 	<assets path="assets/songs"         library="songs"         exclude="*.mp3" unless="web"/>
 	<assets path="assets/shared"        library="shared"        exclude="*.ogg" if="web"/>
 	<assets path="assets/shared"        library="shared"        exclude="*.mp3" unless="web"/>
-	<assets path="assets/tutorial"      library="tutorial"      exclude="*.ogg" if="web"/>
-	<assets path="assets/tutorial"      library="tutorial"      exclude="*.mp3" unless="web"/>
-	<assets path="assets/week1"         library="week1"         exclude="*.ogg" if="web"/>
-	<assets path="assets/week1"         library="week1"         exclude="*.mp3" unless="web"/>
-	<assets path="assets/week2"         library="week2"         exclude="*.ogg" if="web"/>
-	<assets path="assets/week2"         library="week2"         exclude="*.mp3" unless="web"/>
-	<assets path="assets/week3"         library="week3"         exclude="*.ogg" if="web"/>
-	<assets path="assets/week3"         library="week3"         exclude="*.mp3" unless="web"/>
-	<assets path="assets/week4"         library="week4"         exclude="*.ogg" if="web"/>
-	<assets path="assets/week4"         library="week4"         exclude="*.mp3" unless="web"/>
-	<assets path="assets/week5"         library="week5"         exclude="*.ogg" if="web"/>
-	<assets path="assets/week5"         library="week5"         exclude="*.mp3" unless="web"/>
-	<assets path="assets/week6"         library="week6"         exclude="*.ogg" if="web"/>
-	<assets path="assets/week6"         library="week6"         exclude="*.mp3" unless="web"/>
 	
         <assets path="assets/artemis"         library="artemis"     if="windows"/>
 
 	<assets path='example_mods' rename='mods' embed='false' if="MODS_ALLOWED"/>
-	<assets path='art/readme.txt' rename='a little note.txt' />
+	<assets path='art/readme.txt' rename='read me PLEASE.txt' />
        	<assets path='Launch.bat' if="windows"/>
 	<assets path='modsList.txt' rename='' />
 	<assets path='LICENSE' rename='LICENSE.txt' />

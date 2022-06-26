@@ -697,12 +697,12 @@ class TitleState extends MusicBeatState
 					addMoreText('Friday Night Funkin');
 				// credTextShit.visible = true;
 				case 14:
-					addMoreText('Joalor64 Engine');
+					addMoreText('VS');
 				// credTextShit.text += '\nJoalor64 Engine';
 				case 15:
-					addMoreText('V1.1.0'); // credTextShit.text += '\nV1.0.0';
+					addMoreText('Rasazy'); // credTextShit.text += '\nV1.0.0';
 				case 16:
-			     	addMoreText('LOL');
+			     	addMoreText('Full Week');
 
 				case 17:
 					skipIntro();

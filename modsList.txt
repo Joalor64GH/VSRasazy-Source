@@ -1,2 +1,1 @@
-your-mod-here|1
-your-other-mod-here|2
+vs-rasazy|1

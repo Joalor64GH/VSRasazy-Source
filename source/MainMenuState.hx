@@ -55,6 +55,7 @@ class MainMenuState extends MusicBeatState
 	public static var betaRelease:String = ''; 
 	public static var preRelease:String = '';
 	public static var hotfixRelease:String = ''; 
+	public static var rasazyVersion:String = '1.0.0'; // This is also used for Discord RPC
 	public static var joalor64EngineVersion:String = '1.1.0'; // This is also used for Discord RPC
 	public static var psychEngineVersion:String = '0.5.2h'; // This is also used for Discord RPC
 	public static var curSelected:Int = 0;
@@ -114,16 +115,10 @@ class MainMenuState extends MusicBeatState
 			optionShit = [
 				'story_mode',
 				'freeplay',
-				#if MODS_ALLOWED 'mods',
-				#end
-				#if ACHIEVEMENTS_ALLOWED
-				'awards',
-				#end
-				'credits',
 				#if !switch 'donate',
 				#end
-                                'editors',
-				'options'
+				'options',
+				'credits'
 			];
 		}
 
@@ -240,6 +235,10 @@ class MainMenuState extends MusicBeatState
 
 		FlxG.camera.follow(camFollowPos, null, 1);
 
+		var versionShit:FlxText = new FlxText(12, FlxG.height - 64, 0, "VS Rasazy v" + rasazyVersion, 12);
+		versionShit.scrollFactor.set();
+		versionShit.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		add(versionShit);
 		var versionShit:FlxText = new FlxText(12, FlxG.height - 64, 0, "Joalor64 Engine v" + joalor64EngineVersion, 12);
 		versionShit.scrollFactor.set();
 		versionShit.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
